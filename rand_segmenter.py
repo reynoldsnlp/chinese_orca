@@ -12,7 +12,7 @@ from sys import stdin
 from sys import stderr
 
 MAX_WORD_LEN = 5
-PROB = 0.46  # probability that word with continue without a space
+PROB = 0.46  # probability that word will continue without a space
 
 in_text = (c for c in stdin.read())  # generator object
 
