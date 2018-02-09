@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for each in ~/repos/UD_Chinese/*.conllu
+do
+	egrep "^# text = " ${each} | sed 's/^# text = //g' | tr -d " " > $(echo ${each} | sed 's/^.*Chinese\///g' | sed 's/\.conllu/-simp-sents.txt)
+	egrep -v "^# (text|sent_id)" ${each} | egrep -v "^$" | tr -d " " > $(echo ${each} | sed 's/^.*Chinese\///g' | sed 's/\.conllu/-simp-toks.txt)
+done
+
