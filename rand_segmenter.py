@@ -19,7 +19,7 @@ in_text = (c for c in stdin.read())  # generator object
 out_text = next(in_text)  # start with character (not a space)
 word_len = 1
 while True:
-    if random() <= PROB:  
+    if random() <= PROB:
         try:
             out_text += next(in_text)
             word_len += 1
@@ -40,7 +40,7 @@ while True:
 
 print(out_text, end='')
 w_lens = [len(w) for w in out_text.split()]
-print('mean word length:', mean(w_lens), file=stderr) 
+print('mean word length:', mean(w_lens), file=stderr)
 print('word length distribution:', file=stderr)
 for k, v in Counter(w_lens).items():
     print('\t', k, ': ', v, sep='', file=stderr)
