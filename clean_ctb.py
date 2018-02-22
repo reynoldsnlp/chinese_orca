@@ -1,4 +1,5 @@
 """Remove xml tags from CTB corpus."""
+# THIS SCRIPT IS AUTOMATICALLY RUN BY build_ctb.sh
 
 from glob import glob
 import re

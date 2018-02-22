@@ -1,3 +1,4 @@
+python3 clean_ctb.py
 mkdir -p CTBsegs
 cat ctb8.0/data/segmented/*.txt > CTBsegs/ctb-all-simp-segmented.txt
 cat CTBsegs/ctb-all-simp-segmented.txt | sed 's/ //g' > CTBsegs/ctb-all-simp-running.txt
