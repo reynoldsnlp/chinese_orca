@@ -1,0 +1,2 @@
+Abstract
+Written Chinese does not separate its characters by spaces, leading to ambiguity that is easily resolved by a human, but poses a real problem for an automated segmenter. Even with a lineup of all possible parses available, the program must then have some means of deciding among them. We plan to approach this task by working to improve an existing segmenter and then developing a constraint grammar that eliminates parses that are impossible given the rules of Mandarin. An accurate system would have real implications for advancing machine translation technology.
