@@ -3,7 +3,7 @@ and compare it against any given gold standard spaced file, returning
 accuracy, precision, and recall.
 
 Usage:
-python3 evalsegmenter.py <segmenter output file> <gold standard file>
+$ python3 evalsegmenter.py <segmenter's output file> <gold standard file>
 """
 
 import re
@@ -43,7 +43,6 @@ precision = len([True for gold, pred in zip(sc_gold_segs, sc_test_segs)
 recall = len([True for gold, pred in zip(sc_gold_segs, sc_test_segs)
               if pred == 's' and gold == pred]) / (sc_test_segs.count('s') + len([True for gold, pred in zip(sc_gold_segs, sc_test_segs) if pred == 'c' and gold == 's']))  # noqa
 
-
 # assuming filename format "CORPUSsegs/segmenter-trad|simp-segmented.txt"
 segmenter_filename_ls = in_filename.split('-')
 segmenter = segmenter_filename_ls[0]
@@ -57,11 +56,5 @@ gold = gold_filename_ls[0]
 gold_ls = gold.split('/')
 gold = gold_ls[1].upper()
 
-print('\n')
-print('Comparing the ' + segmenter + ' segmentations against the ' + gold + ' gold standard.')  # noqa
-print('(Using ' + chars + ' characters)')
-print('\n')
-print('accuracy', '\t', round(accuracy, 4))
-print('precision', '\t', round(precision, 4))
-print('recall', '\t\t', round(recall, 4))
-print('\n')
+with open('segs.tsv', 'a') as outfile:
+    print(segmenter, gold, chars, accuracy, precision, recall, sep='\t', file=outfile)  # noqa
