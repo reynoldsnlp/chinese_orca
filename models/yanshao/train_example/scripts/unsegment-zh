@@ -1,0 +1,34 @@
+#!/usr/bin/perl -w
+# authors: Huihsin Tseng and Pi-Chuan Chang <pichuan@stanford.edu>                                                                                       
+use POSIX;
+use Fatal qw(open close);
+use utf8;
+binmode(STDIN,":utf8");
+binmode(STDOUT,":utf8");
+binmode(STDERR,":utf8");
+
+sub notChinese {
+        my $c = shift;
+        #return ($c =~ /[A-Za-z0-9\x{ff10}-\x{ff19}\x{ff21}-\x{ff3a}\x{ff41}-\x{ff5a}]/);
+        return ($c =~ /[A-Za-z0-9０-９Ａ-Ｚａ-ｚ]/);
+}
+
+sub remSpace {
+        my ($f,$a) = @_;
+        if(notChinese($f) && notChinese($a)) {
+                return "$f $a";
+        } else {
+                return "$f$a";
+        }
+}
+
+while(<STDIN>) {
+        s/^ //;
+        s/ $//;
+        s/(\S)\s(\S)/remSpace($1,$2)/ge;
+        s/(\S)\s(\S)/remSpace($1,$2)/ge;
+        s/^ *//;
+        s/ *$//;
+        s/\s{2,}/ /;
+        print;
+}
