@@ -31,7 +31,7 @@ ZPAR=~/repos/zpar
 echo "training Zpar model..."
 mkdir -p models/zpar
 cd models/zpar
-${ZPAR}/dist/segmentor/train ${ORCA}/CTBsegs/ctb-train-simp-segmented.txt ${ORCA}/models/zpar-ctb-train-simp.model 1
+${ZPAR}/dist/segmentor/train ${ORCA}/CTBsegs/ctb-train-simp-segmented.txt ${ZPAR}/zpar-ctb-train-simp.model 1
 cd ../..
 # 
 
