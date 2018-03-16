@@ -65,11 +65,11 @@ with open('CTBsegs/ctb-train-simp-segmented.txt', 'w') as train_file, \
             else:
                 print(short_f, file=train_list_file)
                 for line in seg_file:
-                    if not re.match(r'\s*<', line) and line.strip() != '':
+                    if not re.match(r'\s*<', line) and line.strip() != '' and 'BULLET' not in line:
                         print(line, end='', file=train_file)
                         print(line, end='', file=all_file)
                 for line in tag_file:
-                    if not re.match(r'\s*<', line) and line.strip() != '':
+                    if not re.match(r'\s*<', line) and line.strip() != '' and 'BULLET' not in line:
                         print(line, end='', file=train_tag_file)
                         print(line, end='', file=all_tag_file)
 
