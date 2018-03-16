@@ -1,14 +1,13 @@
 #!/bin/bash
 
 echo "Building CTB files..."
-echo "    ...splitting into train and test..."
-python3 build_ctb.py  # split into train and test (includes cleaning like clean_ctb.py)
-echo "    ...cleaning combined corpus..."
-python3 clean_ctb.py  # clean all files for combined corpus
+echo "    ...splitting into train, dev, test, and all..."
+python3 build_ctb.py  # split into train, dev, test, and all
 echo "    ...concatenating corpora..."
 mkdir -p CTBsegs
 cat ctb8.0/data/segmented/*.txt > CTBsegs/ctb-all-simp-segmented.txt
 cat CTBsegs/ctb-train-simp-segmented.txt | sed 's/ //g' > CTBsegs/ctb-train-simp-running.txt
+cat CTBsegs/ctb-dev-simp-segmented.txt | sed 's/ //g' > CTBsegs/ctb-dev-simp-running.txt
 cat CTBsegs/ctb-test-simp-segmented.txt | sed 's/ //g' > CTBsegs/ctb-test-simp-running.txt
 cat CTBsegs/ctb-all-simp-segmented.txt | sed 's/ //g' > CTBsegs/ctb-all-simp-running.txt
 echo "    ...transliterating... (simp2trad)..."
