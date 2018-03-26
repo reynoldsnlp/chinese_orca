@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export FNLP="/Users/Smith-Box/repos/fnlp/"
+export FNLP="${HOME}/repos/fnlp/"
 
 for each in CTBsegs/ctb-all-simp-running.txt CTBsegs/ctb-all-trad-running.txt;
   do
