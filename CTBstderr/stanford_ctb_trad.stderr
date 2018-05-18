@@ -1,0 +1,25 @@
+(CTB):
+File: /Users/Smith-Box/Documents/chinese_orca/CTBsegs/ctb-all-trad-running.txt
+Encoding: UTF-8
+-------------------------------
+Invoked on Thu Mar 01 20:42:43 MST 2018 with arguments: -sighanCorporaDict stanford-segmenter-2017-06-09/data -textFile /Users/Smith-Box/Documents/chinese_orca/CTBsegs/ctb-all-trad-running.txt -inputEncoding UTF-8 -sighanPostProcessing true -keepAllWhitespaces false -loadClassifier stanford-segmenter-2017-06-09/data/ctb.gz -serDictionary stanford-segmenter-2017-06-09/data/dict-chris6.ser.gz
+inputEncoding=UTF-8
+sighanCorporaDict=stanford-segmenter-2017-06-09/data
+loadClassifier=stanford-segmenter-2017-06-09/data/ctb.gz
+serDictionary=stanford-segmenter-2017-06-09/data/dict-chris6.ser.gz
+sighanPostProcessing=true
+textFile=/Users/Smith-Box/Documents/chinese_orca/CTBsegs/ctb-all-trad-running.txt
+keepAllWhitespaces=false
+Loading Chinese dictionaries from 1 file:
+  stanford-segmenter-2017-06-09/data/dict-chris6.ser.gz
+Done. Unique words in ChineseDictionary is: 423200.
+Loading classifier from stanford-segmenter-2017-06-09/data/ctb.gz ... done [10.6 sec].
+Loading character dictionary file from stanford-segmenter-2017-06-09/data/dict/character_list [done].
+Loading affix dictionary from stanford-segmenter-2017-06-09/data/dict/in.ctb [done].
+ChineseUtils.normalize warning: private use area codepoint U+e5f1 in 
+ChineseUtils.normalize warning: private use area codepoint U+e5f1 in 
+ChineseUtils.normalize warning: private use area codepoint U+e5f1 in 
+ChineseUtils.normalize warning: private use area codepoint U+e5f1 in 
+ChineseUtils.normalize warning: private use area codepoint U+e5f1 in 
+ChineseUtils.normalize warning: private use area codepoint U+e5f1 in 
+CRFClassifier tagged 2589805 words in 71369 documents at 26578.46 words per second.

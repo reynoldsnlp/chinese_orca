@@ -1,0 +1,19 @@
+(CTB):
+File: CTBsegs/ctb-test-simp-running.txt
+Encoding: UTF-8
+-------------------------------
+Invoked on Fri Mar 16 10:39:31 MDT 2018 with arguments: -sighanCorporaDict stanford-segmenter-2017-06-09/data -textFile CTBsegs/ctb-test-simp-running.txt -inputEncoding UTF-8 -sighanPostProcessing true -keepAllWhitespaces false -loadClassifier stanford-segmenter-2017-06-09/data/ctb.gz -serDictionary stanford-segmenter-2017-06-09/data/dict-chris6.ser.gz
+inputEncoding=UTF-8
+sighanCorporaDict=stanford-segmenter-2017-06-09/data
+loadClassifier=stanford-segmenter-2017-06-09/data/ctb.gz
+serDictionary=stanford-segmenter-2017-06-09/data/dict-chris6.ser.gz
+sighanPostProcessing=true
+textFile=CTBsegs/ctb-test-simp-running.txt
+keepAllWhitespaces=false
+Loading Chinese dictionaries from 1 file:
+  stanford-segmenter-2017-06-09/data/dict-chris6.ser.gz
+Done. Unique words in ChineseDictionary is: 423200.
+Loading classifier from stanford-segmenter-2017-06-09/data/ctb.gz ... done [10.3 sec].
+Loading character dictionary file from stanford-segmenter-2017-06-09/data/dict/character_list [done].
+Loading affix dictionary from stanford-segmenter-2017-06-09/data/dict/in.ctb [done].
+CRFClassifier tagged 59095 words in 1370 documents at 9104.14 words per second.
