@@ -18,3 +18,6 @@ UD-train-simp-running.txt
 UD-train-simp-segmented.txt
 UD-train-trad-running.txt
 UD-train-trad-segmented.txt
+models/yanshao/dev.txt
+models/yanshao/test.txt
+models/yanshao/train.txt
