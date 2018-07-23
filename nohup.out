@@ -1,0 +1,356 @@
+training model for yanshao, tiedemann & nivre...
+~/repos/yanshao_tagger ~/repos/chinese_orca
+Encoding:  utf-8
+Reading data......
+Reading embeddings...
+Using Radical dictionary...
+Traceback (most recent call last):
+  File "tagger.py", line 144, in <module>
+    train_gram = toolbox.get_gram_vec(path, train_file, gram2idx)
+  File "/home/rob/repos/yanshao_tagger/toolbox.py", line 735, in get_gram_vec
+    for line in codecs.open(real_path, 'r', encoding='utf-8'):
+  File "/usr/lib/python2.7/codecs.py", line 699, in next
+    return self.reader.next()
+  File "/usr/lib/python2.7/codecs.py", line 630, in next
+    line = self.readline()
+  File "/usr/lib/python2.7/codecs.py", line 532, in readline
+    if len(self.linebuffer) == 1:
+KeyboardInterrupt
+training model for yanshao, tiedemann & nivre...
+~/repos/yanshao_tagger ~/repos/chinese_orca
+WARNING:tensorflow:From /home/rob/repos/yanshao_tagger/layers.py:300: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+Encoding:  utf-8
+Reading data......
+Reading embeddings...
+Using Radical dictionary...
+Longest sentence by character is 418. 
+Longest sentence by word is 242. 
+Longest word is 104. 
+Number of buckets:  39
+Training set: 65467 instances; Dev set: 3614 instances.
+Initialization....
+Bucket 1, 0.568074 seconds
+Bucket 2, 0.156680 seconds
+Bucket 3, 0.167799 seconds
+Bucket 4, 0.162262 seconds
+Bucket 5, 0.156511 seconds
+Bucket 6, 0.157020 seconds
+Bucket 7, 0.156586 seconds
+Bucket 8, 0.493624 seconds
+Bucket 9, 0.157359 seconds
+Bucket 10, 0.156574 seconds
+Bucket 11, 0.157094 seconds
+Bucket 12, 0.157078 seconds
+Bucket 13, 0.158206 seconds
+Bucket 14, 0.156789 seconds
+Bucket 15, 0.160855 seconds
+Bucket 16, 0.198380 seconds
+Bucket 17, 0.199453 seconds
+Bucket 18, 0.560053 seconds
+Bucket 19, 0.157503 seconds
+Bucket 20, 0.157713 seconds
+Bucket 21, 0.157211 seconds
+Bucket 22, 0.157598 seconds
+Bucket 23, 0.157249 seconds
+Bucket 24, 0.157532 seconds
+Bucket 25, 0.157612 seconds
+Bucket 26, 0.157350 seconds
+Bucket 27, 0.156245 seconds
+Bucket 28, 0.156788 seconds
+Bucket 29, 0.157501 seconds
+Bucket 30, 0.549750 seconds
+Bucket 31, 0.164121 seconds
+Bucket 32, 0.162001 seconds
+Bucket 33, 0.162123 seconds
+Bucket 34, 0.158675 seconds
+Bucket 35, 0.156947 seconds
+Bucket 36, 0.158199 seconds
+Bucket 37, 0.157052 seconds
+Bucket 38, 0.157740 seconds
+Bucket 39, 0.168390 seconds
+Training preparation...
+Defining loss...
+Traceback (most recent call last):
+  File "tagger.py", line 201, in <module>
+    clipping=args.clipping)
+  File "/home/rob/repos/yanshao_tagger/bucket_model.py", line 280, in config
+    batch_size=self.real_batches[i])
+  File "/home/rob/repos/yanshao_tagger/losses.py", line 105, in loss_wrapper
+    total_loss.append(loss_function(sy, sy_, stranstion, snums_tags, batch_size))
+  File "/home/rob/repos/yanshao_tagger/losses.py", line 93, in crf_loss
+    total_path_score, _, _ = Forward(tag_scores, transitions, nums_tags, lengths, batch_size)()
+  File "/home/rob/repos/yanshao_tagger/layers.py", line 321, in __call__
+    current =  tf.reshape(self.observations[t,:, :, :], [-1, 1, self.nums_tags + 1])
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/array_ops.py", line 563, in _slice_helper
+    packed_begin, packed_end, packed_strides = (stack(begin), stack(end),
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/array_ops.py", line 928, in stack
+    return ops.convert_to_tensor(values, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 946, in convert_to_tensor
+    as_ref=False)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 1036, in internal_convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/constant_op.py", line 235, in _constant_tensor_conversion_function
+    return constant(v, dtype=dtype, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/constant_op.py", line 214, in constant
+    value, dtype=dtype, shape=shape, verify_shape=verify_shape))
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/tensor_util.py", line 492, in make_tensor_proto
+    tensor_shape=tensor_shape.as_shape(shape).as_proto())
+KeyboardInterrupt
+~/repos/chinese_orca
+training model for yanshao, tiedemann & nivre...
+~/repos/yanshao_tagger ~/repos/chinese_orca
+WARNING:tensorflow:From /home/rob/repos/yanshao_tagger/layers.py:300: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+2018-03-26 15:05:31.144496: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+Encoding:  utf-8
+Reading data......
+Reading embeddings...
+Using Radical dictionary...
+Longest sentence by character is 418. 
+Longest sentence by word is 242. 
+Longest word is 104. 
+Number of buckets:  39
+Training set: 65467 instances; Dev set: 3614 instances.
+Initialization....
+Bucket 1, 0.550416 seconds
+Bucket 2, 0.168652 seconds
+Bucket 3, 0.161346 seconds
+Bucket 4, 0.160681 seconds
+Bucket 5, 0.157532 seconds
+Bucket 6, 0.162069 seconds
+Bucket 7, 0.158297 seconds
+Bucket 8, 0.502789 seconds
+Bucket 9, 0.184769 seconds
+Bucket 10, 0.170335 seconds
+Bucket 11, 0.170497 seconds
+Bucket 12, 0.170908 seconds
+Bucket 13, 0.160382 seconds
+Bucket 14, 0.156919 seconds
+Bucket 15, 0.165783 seconds
+Bucket 16, 0.160574 seconds
+Bucket 17, 0.157988 seconds
+Bucket 18, 0.539743 seconds
+Bucket 19, 0.161247 seconds
+Bucket 20, 0.157858 seconds
+Bucket 21, 0.158109 seconds
+Bucket 22, 0.157653 seconds
+Bucket 23, 0.162453 seconds
+Bucket 24, 0.159979 seconds
+Bucket 25, 0.160345 seconds
+Bucket 26, 0.159107 seconds
+Bucket 27, 0.157024 seconds
+Bucket 28, 0.163711 seconds
+Bucket 29, 0.166551 seconds
+Bucket 30, 0.566433 seconds
+Bucket 31, 0.170970 seconds
+Bucket 32, 0.161497 seconds
+Bucket 33, 0.161153 seconds
+Bucket 34, 0.160404 seconds
+Bucket 35, 0.158395 seconds
+Bucket 36, 0.157466 seconds
+Bucket 37, 0.157951 seconds
+Bucket 38, 0.158092 seconds
+Bucket 39, 0.161362 seconds
+Training preparation...
+Defining loss...
+Computing gradients...
+Bucket 1, 1.392454 seconds
+Bucket 2, 1.747467 seconds
+Bucket 3, 2.167475 seconds
+Bucket 4, 2.559225 seconds
+Bucket 5, 2.957130 seconds
+Bucket 6, 3.779853 seconds
+Bucket 7, 6.464422 seconds
+Bucket 8, 4.260952 seconds
+Bucket 9, 4.711302 seconds
+Bucket 10, 5.025151 seconds
+Bucket 11, 5.500359 seconds
+Bucket 12, 5.914242 seconds
+Bucket 13, 6.332796 seconds
+Bucket 14, 9.682850 seconds
+Bucket 15, 7.098299 seconds
+Bucket 16, 7.518259 seconds
+Bucket 17, 7.948305 seconds
+Bucket 18, 8.351705 seconds
+Bucket 19, 8.862128 seconds
+Bucket 20, 13.295040 seconds
+Bucket 21, 9.842445 seconds
+Bucket 22, 10.198705 seconds
+Bucket 23, 10.793105 seconds
+Bucket 24, 11.225740 seconds
+Bucket 25, 11.591411 seconds
+Bucket 26, 17.541041 seconds
+Bucket 27, 12.941267 seconds
+Bucket 28, 12.878641 seconds
+Bucket 29, 13.260415 seconds
+Bucket 30, 13.689006 seconds
+Bucket 31, 14.604815 seconds
+Bucket 32, 23.207380 seconds
+Bucket 33, 15.517427 seconds
+Bucket 34, 15.755663 seconds
+Bucket 35, 16.178133 seconds
+Bucket 36, 16.554654 seconds
+Bucket 37, 17.493666 seconds
+Bucket 38, 31.131514 seconds
+Bucket 39, 20.406225 seconds
+Done. Time consumed: 690 seconds
+epoch: 1
+Segmentation F1-score: 0.946775
+POS Tagging F1-score: 0.890895
+
+Time consumed: 3331 seconds
+epoch: 2
+Segmentation F1-score: 0.954062
+POS Tagging F1-score: 0.903157
+
+Time consumed: 2517 seconds
+epoch: 3
+Segmentation F1-score: 0.953157
+POS Tagging F1-score: 0.903702
+
+Time consumed: 2828 seconds
+epoch: 4
+Segmentation F1-score: 0.952779
+POS Tagging F1-score: 0.902025
+
+Time consumed: 2560 seconds
+epoch: 5
+Segmentation F1-score: 0.953005
+POS Tagging F1-score: 0.901854
+
+Time consumed: 2564 seconds
+epoch: 6
+Segmentation F1-score: 0.953154
+POS Tagging F1-score: 0.902916
+
+Time consumed: 2577 seconds
+epoch: 7
+Segmentation F1-score: 0.952056
+POS Tagging F1-score: 0.900956
+
+Time consumed: 2702 seconds
+epoch: 8
+Segmentation F1-score: 0.952503
+POS Tagging F1-score: 0.900880
+
+Time consumed: 2648 seconds
+epoch: 9
+Segmentation F1-score: 0.952822
+POS Tagging F1-score: 0.901481
+
+Time consumed: 2571 seconds
+epoch: 10
+Segmentation F1-score: 0.953109
+POS Tagging F1-score: 0.901661
+
+Time consumed: 2652 seconds
+epoch: 11
+Segmentation F1-score: 0.953096
+POS Tagging F1-score: 0.902533
+
+Time consumed: 2566 seconds
+epoch: 12
+Segmentation F1-score: 0.953250
+POS Tagging F1-score: 0.902063
+
+Time consumed: 2567 seconds
+epoch: 13
+Segmentation F1-score: 0.953606
+POS Tagging F1-score: 0.901709
+
+Time consumed: 2566 seconds
+epoch: 14
+Segmentation F1-score: 0.953180
+POS Tagging F1-score: 0.902263
+
+Time consumed: 2572 seconds
+epoch: 15
+Segmentation F1-score: 0.953232
+POS Tagging F1-score: 0.902191
+
+Time consumed: 2567 seconds
+epoch: 16
+Segmentation F1-score: 0.953600
+POS Tagging F1-score: 0.902703
+
+Time consumed: 2568 seconds
+epoch: 17
+Segmentation F1-score: 0.953683
+POS Tagging F1-score: 0.902042
+
+Time consumed: 2567 seconds
+epoch: 18
+Segmentation F1-score: 0.953847
+POS Tagging F1-score: 0.902572
+
+Time consumed: 2561 seconds
+epoch: 19
+Segmentation F1-score: 0.954067
+POS Tagging F1-score: 0.902715
+
+Time consumed: 2574 seconds
+epoch: 20
+Segmentation F1-score: 0.953508
+POS Tagging F1-score: 0.902519
+
+Time consumed: 2575 seconds
+epoch: 21
+Segmentation F1-score: 0.953929
+POS Tagging F1-score: 0.902564
+
+Time consumed: 2575 seconds
+epoch: 22
+Segmentation F1-score: 0.953955
+POS Tagging F1-score: 0.902651
+
+Time consumed: 2571 seconds
+epoch: 23
+Segmentation F1-score: 0.953802
+POS Tagging F1-score: 0.902159
+
+Time consumed: 2569 seconds
+epoch: 24
+Segmentation F1-score: 0.953588
+POS Tagging F1-score: 0.902498
+
+Time consumed: 2430 seconds
+epoch: 25
+Segmentation F1-score: 0.953646
+POS Tagging F1-score: 0.902635
+
+Time consumed: 2426 seconds
+epoch: 26
+Segmentation F1-score: 0.953572
+POS Tagging F1-score: 0.902192
+
+Time consumed: 2428 seconds
+epoch: 27
+Segmentation F1-score: 0.953659
+POS Tagging F1-score: 0.902185
+
+Time consumed: 2420 seconds
+epoch: 28
+Segmentation F1-score: 0.953399
+POS Tagging F1-score: 0.901987
+
+Time consumed: 2427 seconds
+epoch: 29
+Segmentation F1-score: 0.953807
+POS Tagging F1-score: 0.902405
+
+Time consumed: 2410 seconds
+epoch: 30
+Segmentation F1-score: 0.953448
+POS Tagging F1-score: 0.902083
+
+Time consumed: 2384 seconds
+Training is finished!
+Best segmentation F1-score: 0.954067
+Best POS Tagging F1-score: 0.902715
+Best epoch: 19
+
+Done. Time consumed: 77286 seconds
+~/repos/chinese_orca
